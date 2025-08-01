@@ -1,0 +1,57 @@
+# ---- General ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDEs / Editors
+.idea/
+.vscode/
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Environment files
+.env
+.env.*
+
+# ---- Java / Maven ----
+# Maven target directory
+/target/
+# Compiled class files
+*.class
+# Package files
+*.jar
+*.war
+*.ear
+
+# Eclipse/IntelliJ project files
+.classpath
+.project
+.settings/
+
+# Spring Boot
+spring.log
+
+# ---- Node / React ----
+# Dependency directory
+/frontend/node_modules/
+# Production build
+/frontend/build/
+/frontend/dist/
+
+# Yarn / npm lock files (optional)
+# Uncomment if you prefer not to commit lockfiles
+# yarn.lock
+# package-lock.json
+
+# ---- Coverage / Reports ----
+coverage/
+.*coverage*
+istanbul-report/
+
+# ---- Others ----
+*.bak
+*.tmp
