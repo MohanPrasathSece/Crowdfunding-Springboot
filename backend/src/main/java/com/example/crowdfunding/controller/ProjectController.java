@@ -56,11 +56,14 @@ public class ProjectController {
     }
 
     private ProjectDTO convertToDto(Project project) {
-        UserDTO ownerDto = new UserDTO(
-                project.getOwner().getId(),
-                project.getOwner().getName(),
-                project.getOwner().getEmail()
-        );
+        UserDTO ownerDto = null;
+        if (project.getOwner() != null) {
+            ownerDto = new UserDTO(
+                    project.getOwner().getId(),
+                    project.getOwner().getName(),
+                    project.getOwner().getEmail()
+            );
+        }
 
         return new ProjectDTO(
                 project.getId(),
@@ -143,9 +146,6 @@ public class ProjectController {
                 owner = userRepository.findByEmail(authentication.getName()).orElse(null);
             } else {
                 owner = null;
-            }
-            if (owner == null) {
-                return ResponseEntity.status(401).body(Map.of("message", "Unauthorized"));
             }
 
             Project project = new Project(

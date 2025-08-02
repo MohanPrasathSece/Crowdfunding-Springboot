@@ -13,6 +13,7 @@ import MyCampaigns from './pages/MyCampaigns';
 
 import CampaignDetail from './pages/CampaignDetail';
 import MyDonations from './pages/MyDonations';
+import MyProfile from './pages/MyProfile';
 import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
 import { useAuth } from './context/AuthContext';
@@ -103,6 +104,14 @@ function App() {
         <Route path="/login" element={<Login />} />
                 
         <Route path="/signup" element={<Signup />} />
+                <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <MyProfile />
+            </PrivateRoute>
+          }
+        />
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} />
     </div>

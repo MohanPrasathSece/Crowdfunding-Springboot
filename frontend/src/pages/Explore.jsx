@@ -123,7 +123,7 @@ const Explore = () => {
       {selected && (
         <Modal open={showDonate} onClose={() => setShowDonate(false)}>
           <h3 className="text-xl font-semibold mb-2 text-orange-500">Donate to {selected.title}</h3>
-          <p className="text-sm text-gray-700 mb-4">by {selected.owner.name}</p>
+          <p className="text-sm text-gray-700 mb-4">by {selected.owner?.name || selected.owner?.email?.split('@')[0] || 'Unknown'}</p>
 
           <div className="mb-4 text-sm space-y-1 text-black">
             <div className="flex justify-between">

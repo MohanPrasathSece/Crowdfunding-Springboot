@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import api from '../api';
 import Modal from '../components/Modal';
 
@@ -9,7 +9,6 @@ const ProjectPage = () => {
   const [loading, setLoading] = useState(true);
   const [amount, setAmount] = useState('');
   const [showConfirm, setShowConfirm] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProject = async () => {

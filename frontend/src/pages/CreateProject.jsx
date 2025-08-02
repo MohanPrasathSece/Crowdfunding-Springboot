@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api';
-import { toast } from 'react-toastify';
+
 
 const CreateProject = () => {
   const [form, setForm] = useState({
@@ -24,7 +24,6 @@ const CreateProject = () => {
         ...form,
         goalAmount: parseFloat(form.goalAmount),
       });
-      toast.success('Project created');
       navigate('/explore');
     } catch (err) {
       // handled by interceptor

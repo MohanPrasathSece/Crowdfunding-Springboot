@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
       setToken(t);
       setUser(jwtDecode(t));
       localStorage.setItem('token', t);
-      toast.success('Login successful');
+      
       console.log('Successfully connected to backend');
     } catch (err) {
       console.error('Login error:', err);
@@ -75,7 +75,7 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
     setUser(null);
     localStorage.removeItem('token');
-    toast.info('Logged out');
+    
   };
 
   return (

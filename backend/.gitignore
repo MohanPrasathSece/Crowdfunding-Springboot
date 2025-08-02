@@ -27,10 +27,35 @@ logs/
 *.war
 *.ear
 
-# Eclipse/IntelliJ project files
-.classpath
-.project
-.settings/
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Gradle (if used)
+/build/
+
+# logs
+*.log
+spring.log
+
+# environment files
+.env
+
+# IDE/editor
+/.classpath
+/.project
+/.settings/
+/.idea/
+/.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# test output
+/test-output/
+
 
 # Spring Boot
 spring.log

@@ -8,12 +8,16 @@ const Navbar = () => {
   return (
         <nav className="bg-black border-b border-gray-700 shadow p-4 text-white">
       <div className="container mx-auto flex justify-between items-center">
-                <Link to="/" className="text-xl font-bold text-orange-500">
+                <span className="text-xl font-bold text-orange-500">
           CrowdfundIt
-        </Link>
-        <div className="space-x-4 text-sm">
-          <Link to="/explore">Explore</Link>
-          {token && <Link to="/create">Create</Link>}
+        </span>
+        <div className="space-x-4 text-sm items-center flex">
+          <Link to="/">Home</Link>
+          {token && <>
+            <Link to="/explore">Explore</Link>
+            <Link to="/create">Create</Link>
+            <Link to="/profile">My Profile</Link>
+          </>}
           
           
           {token ? (

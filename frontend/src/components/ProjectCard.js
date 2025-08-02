@@ -13,6 +13,11 @@ const ProjectCard = ({ project, onDonate, onEdit, onDelete }) => {
         src={project.imageUrl}
         alt={project.title}
         className="h-40 w-full object-cover rounded"
+        loading="lazy"
+        crossOrigin="anonymous"
+        referrerPolicy="no-referrer"
+        onError={(e)=>{e.currentTarget.onerror=null;
+            e.currentTarget.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22320%22%20height%3D%22160%22%3E%3Crect%20width%3D%22320%22%20height%3D%22160%22%20fill%3D%22%23ddd%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23666%22%20font-size%3D%2220%22%3ENo%20Image%3C/text%3E%3C/svg%3E';}}
       />
       <h3 className="text-lg font-semibold mt-2 truncate">{project.title}</h3>
             <p className="text-sm text-gray-400 line-clamp-2 flex-grow">{project.description}</p>

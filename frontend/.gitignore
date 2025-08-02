@@ -27,29 +27,33 @@ logs/
 *.war
 *.ear
 
-# Eclipse/IntelliJ project files
-.classpath
-.project
-.settings/
+# dependencies
+/node_modules/
 
-# Spring Boot
-spring.log
+# production build
+/build/
+/dist/
 
-# ---- Node / React ----
-# Dependency directory
-/frontend/node_modules/
-# Production build
-/frontend/build/
-/frontend/dist/
+# misc
+.DS_Store
+.env
+.env.*.local
 
-# Yarn / npm lock files (optional)
-# Uncomment if you prefer not to commit lockfiles
-# yarn.lock
-# package-lock.json
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# ---- Coverage / Reports ----
+# testing
 coverage/
-.*coverage*
+*.lcov
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
 istanbul-report/
 
 # ---- Others ----

@@ -18,6 +18,7 @@ public class Project {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column(length = 2048)
     private String imageUrl;
 
     @Column(nullable = false)
